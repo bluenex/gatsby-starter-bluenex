@@ -1,0 +1,18 @@
+{
+  "extends": "airbnb",
+  "plugins": [
+    "react",
+    "jest"
+  ],
+  "parser": "babel-eslint",
+  "env": {
+    "jest/globals": true
+  },
+  "rules": {
+    "no-nested-ternary": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-underscore-dangle": 0,
+    "react/prop-types": ["error", { "ignore": ["navigation"] }],
+    "global-require": 0
+  }
+}
