@@ -1,13 +1,9 @@
 {
   "extends": "airbnb",
   "plugins": [
-    "react",
-    "jest"
+    "react"
   ],
   "parser": "babel-eslint",
-  "env": {
-    "jest/globals": true
-  },
   "rules": {
     "no-nested-ternary": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
