@@ -6,9 +6,9 @@ module.exports = {
   siteMetadata: {
     title: 'Gatsby Project',
     description: 'A description for this gatsby project.',
-    siteUrl: 'url_to_the_site',
-    image: 'image_of_the_site_og',
-    logo: 'url_to_favicon',
+    siteUrl: 'https://bluenex.github.io',
+    image: 'https://bluenex.github.io/images/blog_avatar.png',
+    logo: 'https://bluenex.github.io',
     type: 'website',
   },
   plugins: [

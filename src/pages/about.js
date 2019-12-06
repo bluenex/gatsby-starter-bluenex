@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/layout';
-import useLocalStorage from '../hooks/useLocalStorage';
+// import useLocalStorage from '../hooks/useLocalStorage';
 import useStaticResources from '../hooks/useStaticResources';
 
 const HeaderWrapper = styled.div`
@@ -12,7 +12,7 @@ const HeaderWrapper = styled.div`
 
 export default () => {
   // use this to retrieve data and rehydrate before globalState is used
-  useLocalStorage();
+  // useLocalStorage();
   useStaticResources();
 
   return (
