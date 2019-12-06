@@ -1,40 +1,49 @@
 import React from 'react';
-import { css } from 'styled-components';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import { rhythm } from '../utils/typography';
+import { Container } from './BaseComponents/container';
+import NavBar from './Navbar';
+import Footer from './Footer';
+import SEO from './BaseComponents/SEO';
+
+const StickyFooterWrapper = styled.div`
+  /* sticky footer */
+  display: flex;
+  height: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+`;
+
+const StyledLink = styled(Link)`
+  height: 100%;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+`;
 
 const Layout = ({ children }) => (
-  <div
-    css={css`
-      margin: 0 auto;
-      max-width: 700px;
-      padding: ${rhythm(2)};
-      padding-top: ${rhythm(1.5)};
-    `}
-  >
-    <Link to="/">
-      <h3
-        css={css`
-          margin-bottom: ${rhythm(2)};
-          display: inline-block;
-          font-style: normal;
-        `}
-      >
-        Pandas Eating Lots
-      </h3>
-    </Link>
-    <Link
-      to="/about/"
-      css={css`
-        float: right;
-      `}
-    >
-      About
-    </Link>
-    {children}
-  </div>
+  <>
+    <SEO />
+    <StickyFooterWrapper>
+      <NavBar>
+        <StyledLink to="/">
+          Home
+        </StyledLink>
+        <StyledLink to="/about">
+          About
+        </StyledLink>
+      </NavBar>
+
+      <Container>
+        {children}
+      </Container>
+
+      <Footer />
+    </StickyFooterWrapper>
+  </>
 );
 
 Layout.propTypes = {

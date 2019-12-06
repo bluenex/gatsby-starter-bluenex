@@ -1,12 +1,28 @@
 import React from 'react';
+import styled from 'styled-components';
 import Layout from '../components/layout';
+import useLocalStorage from '../hooks/useLocalStorage';
+import useStaticResources from '../hooks/useStaticResources';
 
-export default () => (
-  <Layout>
-    <h1>About Pandas Eating Lots</h1>
-    <p>
-      We&#39;re the only site running on your computer dedicated to showing the best
-      photos and videos of pandas eating lots of food.
-    </p>
-  </Layout>
-);
+const HeaderWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export default () => {
+  // use this to retrieve data and rehydrate before globalState is used
+  useLocalStorage();
+  useStaticResources();
+
+  return (
+    <Layout>
+      <HeaderWrapper>
+        <h1>About</h1>
+      </HeaderWrapper>
+      <p>
+        This is an about page!
+      </p>
+    </Layout>
+  );
+};
