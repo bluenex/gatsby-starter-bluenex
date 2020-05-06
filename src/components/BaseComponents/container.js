@@ -17,6 +17,9 @@ const Container = styled.div`
   margin: 0 auto;
   padding: ${rhythm(1)};
   padding-top: ${rhythm(1.5)};
+  padding-bottom: ${rhythm(1.5)};
+  /* bottom 0 helps get rid of unwanted dark area above footer */
+  padding-bottom: ${(props) => !props.padBottom && 0};
 
   ${media.extraLarge`
     width: ${bsContainerWidth.extraLarge};
@@ -32,7 +35,9 @@ const Container = styled.div`
 
   ${media.small`
     width: ${bsContainerWidth.small};
-    padding: ${rhythm(1)} ${rhythm(0.25)};
+    padding: ${rhythm(1)} ${rhythm(0.75)};
+    /* this helps get rid of unwanted dark area above footer */
+    padding-bottom: ${(props) => !props.padBottom && 0};
   `}
 
   ${media.extraSmall`
@@ -47,7 +52,7 @@ const NavContainer = styled(Container)`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 ${rhythm(2)};
+  padding: 0 ${rhythm(1)};
 
   ${media.small`
     width: ${bsContainerWidth.small};

@@ -75,8 +75,16 @@ const NavItem = styled.li`
   justify-content: center;
   align-items: center;
 
+  :last-child {
+    padding-right: 0px;
+  }
+
   ${media.medium`
     padding: 0 10px;
+
+    :last-child {
+      padding-right: 10px;
+    }
   `}
 `;
 

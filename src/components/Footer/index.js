@@ -1,18 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
+import { media } from '../../utils/ui';
 
 const StyledFooter = styled.div`
-  height: 100px;
+  height: 5.5em;
   background-color: #44464b;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* on small screen it could be 4 lines */
+  ${media.extraSmall`
+    height: 6.5em;
+  `}
 `;
 
 const StyledFooterText = styled.div`
+  font-size: 0.75em;
   text-align: center;
-  color: white;
+  color: #eee;
+  line-height: 1.6em;
 `;
 
 const StyledLink = styled.a.attrs({

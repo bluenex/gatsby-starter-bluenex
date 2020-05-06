@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Burger from '../BaseComponents/BurgerMenu';
 import { NavContainer } from '../BaseComponents/container';
 import Menus from './Menus';
+import { media } from '../../utils/ui';
 
 // get logo image using require
 const logo = require('../../images/bluenex-avatar.jpg');
@@ -32,13 +33,17 @@ const LogoWrapper = styled(Link)`
   display: flex;
   /* determine image size here */
   height: ${navHeight}px;
-  padding: 6px 0;
+  padding: 14px 0;
+
+  ${media.extraSmall`
+    margin-left: 10px;
+  `}
 `;
 
 const StyledImg = styled.img`
   margin: 0;
   /* this fix image color by multiplying color of image through bg */
-  mix-blend-mode: multiply;
+  /* mix-blend-mode: multiply; */
   /* grow to fit its wrapper */
   height: 100%;
 `;
