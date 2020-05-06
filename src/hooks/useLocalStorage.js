@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import useGlobal from '../store';
 
-function useLocalStorage() {
+function useLocalStorage(localStorageKey) {
   // define a key used to save data to localStorage
-  const key = 'upennCalendarState';
+  const key = localStorageKey;
 
   // link with useGlobal
   const [globalState, globalActions] = useGlobal();
@@ -14,12 +14,12 @@ function useLocalStorage() {
     globalActions.rehydrateStore(
       JSON.parse(localStorage.getItem(key)),
     );
-  }, [globalActions]);
+  }, [globalActions, key]);
 
   // do this when global state is updated
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(globalState));
-  }, [globalState]);
+  }, [globalState, key]);
 }
 
 export default useLocalStorage;

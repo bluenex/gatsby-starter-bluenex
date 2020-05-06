@@ -1,7 +1,7 @@
 {
-  "name": "penn-events-calendar",
+  "name": "gatsby-starter-bluenex",
   "private": true,
-  "description": "A web application that collects all events happening at the University of Pennsylvania with built-in search and recommendation engine.",
+  "description": "A Gatsby starter project for me.",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -25,6 +25,7 @@
     "@fortawesome/react-fontawesome": "^0.1.8",
     "@reach/router": "^1.2.1",
     "babel-plugin-styled-components": "^1.10.0",
+    "faker": "^4.1.0",
     "gatsby": "^2.18.7",
     "gatsby-plugin-google-analytics": "^2.1.29",
     "gatsby-plugin-react-helmet": "^3.1.16",
@@ -45,6 +46,7 @@
     "styled-components": "^4.4.1",
     "typography": "^0.16.19",
     "typography-theme-moraga": "^0.16.19",
+    "use-debounce": "^3.4.2",
     "use-global-hook": "^0.1.12"
   },
   "devDependencies": {
@@ -67,9 +69,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/titipata/penn-events-calendar"
+    "url": "https://github.com/bluenex/gatsby-starter-bluenex"
   },
   "bugs": {
-    "url": "https://github.com/titipata/penn-events-calendar/issues"
+    "url": "https://github.com/bluenex/gatsby-starter-bluenex/issues"
   }
 }

@@ -10,22 +10,22 @@ exports[`Footer renders correctly 1`] = `
     Made at 
     <a
       className="sc-htpNat bFVrkX"
-      href="http://kordinglab.com/"
+      href="#"
       rel="noopener noreferrer"
       target="_blank"
     >
-      kordinglab.com
+      here
     </a>
-     at University of Pennsylvania
+     from Thailand
     <br />
-    Help us make it better at 
+    Make change at 
     <a
       className="sc-htpNat bFVrkX"
-      href="https://github.com/titipata/penn-events-calendar/issues/"
+      href="https://github.com/bluenex/gatsby-starter-bluenex/"
       rel="noopener noreferrer"
       target="_blank"
     >
-      titipata/penn-events-calendar
+      bluenex/gatsby-starter-bluenex
     </a>
   </div>
 </div>
